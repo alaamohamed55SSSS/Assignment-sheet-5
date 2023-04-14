@@ -1,0 +1,41 @@
+
+package bank;
+
+class Account {
+ private int id ;
+ private double balance;
+ private double annaullIntersrate;
+ private int dataCreated;
+ Account (int s , double balance,double annaullIntersrate){
+     this.balance=balance;
+     this.id=s;
+     this.annaullIntersrate=annaullIntersrate;
+ }
+    public void getId(int z){
+        id=z;
+        
+    }
+    public void getBalance(double v){
+        balance=v;
+    }
+    public void getMonthlyInteresrate(double x){
+        annaullIntersrate=x;
+        
+    }
+    public void dataCreated(){
+        System.out.println("Id = "+id);
+        System.out.println("Balalnce = "+balance);
+        System.out.println("annaullintersrate = "+annaullIntersrate);
+        
+    }
+    public double withDraw(int c){
+        double r = balance -c;
+       
+        if (c>balance)
+            System.out.println("FAILED");
+      return r;
+    }
+ public double deposite(int c){
+        double f = balance +c;
+        return f;
+}}
